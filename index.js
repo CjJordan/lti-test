@@ -55,7 +55,7 @@ const setup = async () => {
   await lti.registerPlatform({
     url: 'https://canvas.instructure.com',
     name: 'Engageli',
-    clientId: '196660000000000105',
+    clientId: '196660000000000106',
     authenticationEndpoint: 'https://engageli.instructure.com/api/lti/authorize_redirect',
     accesstokenEndpoint: 'https://engageli.instructure.com/login/oauth2/token',
     authConfig: { method: 'JWK_SET', key: 'https://engageli.instructure.com/api/lti/security/jwks' }
