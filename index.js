@@ -62,9 +62,9 @@ const setup = async () => {
   }) 
   
    
-    const tokenRes = await platform.platformAccessToken('https://purl.imsglobal.org/spec/lti-nrps/scope/contextmembership.readonly')
+    //const tokenRes = await platform.platformAccessToken('https://purl.imsglobal.org/spec/lti-nrps/scope/contextmembership.readonly')
     console.log("TOKEN")
-    console.log(tokenRes)
+    console.log(JSON.stringify(platform, null, 4));
   console.log("------------")
 }
 
