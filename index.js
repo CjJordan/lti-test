@@ -61,9 +61,11 @@ const setup = async () => {
     authConfig: { method: 'JWK_SET', key: 'https://engageli.instructure.com/api/lti/security/jwks' }
   }) 
   
-   console.log("TOKEN")
+   
     const tokenRes = await platform.platformAccessToken('https://purl.imsglobal.org/spec/lti-nrps/scope/contextmembership.readonly')
+    console.log("TOKEN")
     console.log(tokenRes)
+  console.log("------------")
 }
 
 setup()
