@@ -52,7 +52,7 @@ const setup = async () => {
   /**
    * Register platform
    */
-  await lti.registerPlatform({
+  let platform = await lti.registerPlatform({
     url: 'https://canvas.instructure.com',
     name: 'Engageli',
     clientId: '196660000000000106',
@@ -60,6 +60,10 @@ const setup = async () => {
     accesstokenEndpoint: 'https://engageli.instructure.com/login/oauth2/token',
     authConfig: { method: 'JWK_SET', key: 'https://engageli.instructure.com/api/lti/security/jwks' }
   }) 
+  
+   console.log("TOKEN")
+    const tokenRes = await platform.platformAccessToken('https://purl.imsglobal.org/spec/lti-nrps/scope/contextmembership.readonly')
+    console.log(tokenRes)
 }
 
 setup()
